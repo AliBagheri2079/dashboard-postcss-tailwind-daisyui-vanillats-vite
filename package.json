@@ -6,10 +6,28 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint:scripts": "eslint . --fix",
+    "lint:styles": "stylelint \"**/*.css\"",
+    "lint": "npm run lint:scripts && npm run lint:styles",
+    "format:scripts": "prettier . --write",
+    "format:styles": "stylelint \"**/*.css\" --fix",
+    "format": "npm run format:scripts && npm run format:styles"
   },
   "devDependencies": {
-    "typescript": "^4.9.3",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "postcss-lit": "^1.0.1",
+    "prettier": "2.8.4",
+    "stylelint": "^15.1.0",
+    "stylelint-config-standard": "^30.0.1",
+    "typescript": "^4.9.5",
     "vite": "^4.1.0"
   }
 }
