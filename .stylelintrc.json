@@ -2,6 +2,7 @@
   "extends": "stylelint-config-standard",
   "rules": {
     "no-descending-specificity": null,
+    "at-rule-no-unknown": null,
     "max-nesting-depth": 2,
     "selector-max-id": 1
   }
