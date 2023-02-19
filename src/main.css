@@ -1,3 +1,79 @@
+/*
+@import "tailwindcss/base";
+@import "./custom-base-styles.css";
+
+@import "tailwindcss/components";
+@import "./custom-components.css";
+
+@import "tailwindcss/utilities";
+@import "./custom-utilities.css";
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
+
+@layer components {
+  .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+  .btn-red {
+    @apply font-bold py-2 px-4 rounded #{!important};
+    
+    @media (min-width: theme('screens.sm')) {
+      @apply rounded-lg;
+    }
+  }
+  @screen sm {
+    .card {
+      @apply rounded-lg;
+    }
+  }
+  .card {
+    background-color: theme(colors.white);
+    border-radius: theme(borderRadius.lg);
+    padding: theme(spacing.6);
+    box-shadow: theme(boxShadow.xl);
+  }
+}
+
+@layer utilities {
+  .filter-none {
+    filter: none;
+  }
+  .filter-grayscale {
+    filter: grayscale(100%);
+  }
+}
+*/
+
+/*
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+*/
 @tailwind base;
+
+/*
+  * This injects Tailwind's component classes and any component classes
+  * registered by plugins.
+*/
 @tailwind components;
+
+/*
+  * This injects Tailwind's utility classes and any utility classes registered
+  * by plugins.
+*/
 @tailwind utilities;
+
+/*
+  * Use this directive to control where Tailwind injects the hover, focus,
+  * responsive, dark mode, and other variants of each class.
+  *
+  * If omitted, Tailwind will append these classes to the very end of
+  * your stylesheet by default.
+*/
+@tailwind variants;
