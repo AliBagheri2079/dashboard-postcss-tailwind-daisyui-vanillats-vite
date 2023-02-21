@@ -5,4 +5,16 @@ module.exports = {
     extend: {},
   },
   plugins: [require("daisyui")],
+
+  // daisyUI config (optional)
+  daisyui: {
+    styled: true,
+    themes: ["light", "dark", "bumblebee", "halloween", "emerald", "forest"],
+    base: false,
+    utils: true,
+    logs: true,
+    // rtl: false,
+    // prefix: "daisy-",
+    // darkTheme: "dark",
+  },
 };
