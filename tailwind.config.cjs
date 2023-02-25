@@ -2,7 +2,19 @@
 module.exports = {
   content: ["index.html", "./src/**/*.{js,jsx,ts,tsx,vue,html}"],
   theme: {
-    extend: {},
+    container: {
+      center: true,
+    },
+    extend: {
+      gridTemplateColumns: {
+        // Complex site-specific column configuration
+        layout: "repeat(auto-fit, minmax(min(20vw, 200px), 1fr))",
+      },
+      gridTemplateRows: {
+        // Complex site-specific row configuration
+        layout: "minmax(50px, 10vh) repeat(2, minmax(150px, 1fr))",
+      },
+    },
   },
   plugins: [require("daisyui")],
 
