@@ -1,6 +1,10 @@
-import "./main.css";
+//* App Components
+import "./pages";
 
-const App = document.getElementById("app") as HTMLDivElement;
-App.innerHTML = `
-  <h1 class="text-3xl font-bold underline text-red-700">Hello world!</h1>
-`;
+//* Web Components
+
+//* Theme Change Module
+import "./vendors/themeChange";
+
+//* Main Styles
+import "./style/main.css";
