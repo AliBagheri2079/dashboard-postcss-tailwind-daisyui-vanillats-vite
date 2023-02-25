@@ -1,0 +1,35 @@
+@layer components {
+  .nav-link {
+    @apply !rounded-full transition-colors;
+  }
+
+  .nav-link::before,
+  .nav-link::after {
+    content: "";
+
+    @apply absolute right-0 h-12 w-12 rounded-[50%] bg-transparent;
+  }
+
+  .nav-link::after {
+    @apply -top-12;
+  }
+
+  .nav-link::before {
+    @apply -bottom-12;
+  }
+
+  .nav-link:hover {
+    background-color: hsl(var(--b1));
+    color: hsl(var(--p));
+
+    @apply transition-shadow;
+  }
+
+  .nav-link:hover::after {
+    box-shadow: 31px 31px 0 10px hsl(var(--b1));
+  }
+
+  .nav-link:hover::before {
+    box-shadow: 31px -31px 0 10px hsl(var(--b1));
+  }
+}
