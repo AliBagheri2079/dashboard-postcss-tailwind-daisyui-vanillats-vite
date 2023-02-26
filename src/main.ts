@@ -1,5 +1,5 @@
 //* App Components
-import "./pages";
+import "./container/App";
 
 //* Web Components
 
