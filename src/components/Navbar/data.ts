@@ -67,14 +67,6 @@ export const navItems: Readonly<NavItemList[]> = [
         title: "item 1",
         icon: `<i class="fa-solid fa-arrow-trend-up"></i>`,
       },
-      {
-        title: "item 2",
-        icon: `<i class="fa-solid fa-arrow-trend-up"></i>`,
-      },
-      {
-        title: "item 3",
-        icon: `<i class="fa-solid fa-arrow-trend-up"></i>`,
-      },
     ],
   },
   {
@@ -105,10 +97,6 @@ export const navItems: Readonly<NavItemList[]> = [
       },
       {
         title: "item 2",
-        icon: `<i class="fa-solid fa-arrow-trend-up"></i>`,
-      },
-      {
-        title: "item 3",
         icon: `<i class="fa-solid fa-arrow-trend-up"></i>`,
       },
     ],
