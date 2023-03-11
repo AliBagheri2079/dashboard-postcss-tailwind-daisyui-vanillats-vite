@@ -1,12 +1,20 @@
-import Nav from "@/layouts/private/Nav";
-import Header from "@/layouts/private/Header";
-import Content from "./Content";
-
-const App = document.getElementById("app") as HTMLDivElement;
-App.setAttribute(
+const Pages = document.createElement("main");
+Pages.setAttribute(
   "class",
-  "grid grid-flow-row-dense grid-cols-layout grid-rows-layout md:m-5"
+  "rounded-b-box relative col-start-2 col-end-[-1] row-span-2 bg-base-100"
 );
-App.append(Nav, Header, Content);
+export default Pages;
 
-export default App;
+/*
+<section>
+  <!--    
+    * commite and pre-production and release vs.1
+    * weather search with debounce & throttle - fetch & axios,
+    * list of todo with firebase,
+    * three.js
+    * login form (auth & regex) with web components and upload photo
+    * 2 language
+  -->
+  Content
+</section>
+*/
