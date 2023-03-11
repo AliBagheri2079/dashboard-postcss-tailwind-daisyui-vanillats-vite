@@ -9,6 +9,7 @@ module.exports = {
       gridTemplateColumns: {
         // Complex site-specific column configuration
         layout: "repeat(auto-fit, minmax(min(20vw, 200px), 1fr))",
+        layout_2: "3.5rem 1fr auto",
       },
       gridTemplateRows: {
         // Complex site-specific row configuration
