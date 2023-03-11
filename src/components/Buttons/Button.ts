@@ -1,4 +1,4 @@
-import type { ButtonOptions } from "@/types/interface/ButtonOptions";
+import { type ButtonOptions } from "@/global/interface/ButtonOptions";
 
 const Button = ({ classes, theme }: ButtonOptions): string => {
   return `

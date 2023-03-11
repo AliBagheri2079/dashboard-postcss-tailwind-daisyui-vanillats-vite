@@ -1,4 +1,4 @@
-import type { NavItem } from "@/types/type/NavItem";
+import { type NavItem } from "@/global/types/NavItem";
 import NavLink from "./Link";
 
 const createNavCollapseLink = (collapse: NavItem[]): string => {

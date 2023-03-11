@@ -1,4 +1,4 @@
-import type { NavItemList } from "@/types/interface/NavItemList";
+import { type NavItemList } from "@/global/interface/NavItemList";
 
 export const navItems: Readonly<NavItemList[]> = [
   {

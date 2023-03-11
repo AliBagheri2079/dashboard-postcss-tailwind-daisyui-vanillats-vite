@@ -1,9 +1,13 @@
-import type { NavItem } from "@/types/type/NavItem";
+import { type NavItem } from "@/global/types/NavItem";
 
 const handleActiveLink = (item: Element): void => {
   item.addEventListener("click", event => {
     event.preventDefault();
-    history.replaceState({ id: item.id }, "", `/${item.id}`);
+    history.replaceState(
+      { id: item.getAttribute("data-id") },
+      "",
+      `#${item.getAttribute("data-id") ?? ""}`
+    );
 
     // const justNavItem: boolean =
     //   item.parentElement?.classList.contains("nav-item") === true;
@@ -31,9 +35,9 @@ const NavLink = ({ title, icon }: NavItem): string => {
 
   return `
     <a
-      href="/${itemLink}"
-      id="${itemLink}"
       class="nav-link"
+      href="#${itemLink}"
+      data-id="${itemLink}"
     >
       <span class="text-2xl tooltip tooltip-right" data-tip="${title}">
         ${icon}
