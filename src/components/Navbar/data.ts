@@ -20,6 +20,10 @@ export const navItems: Readonly<NavItemList[]> = [
     ],
   },
   {
+    title: "weather",
+    icon: `<i class="fa-solid fa-cloud"></i>`,
+  },
+  {
     title: "menu layout",
     icon: `<i class="fa-solid fa-cube"></i>`,
   },

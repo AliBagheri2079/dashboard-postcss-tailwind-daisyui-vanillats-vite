@@ -3,6 +3,7 @@ import Header from "@/layouts/private/Header";
 import Pages from "@/pages";
 import Dashboard from "@/pages/dashboard";
 import SingleCoin from "@/pages/coin";
+import Weather from "@/pages/weather";
 
 const App = document.getElementById("app") as HTMLDivElement;
 App.setAttribute(
@@ -37,9 +38,8 @@ const manageHashes = (): void => {
   const hash = location.hash ?? history.state;
 
   switch (hash) {
-    case "#crud": {
-      // Pages.replaceChildren(Dashboard, li);
-      console.log("crud");
+    case "#weather": {
+      Pages.replaceChildren(Dashboard, Weather);
       break;
     }
     default: {
