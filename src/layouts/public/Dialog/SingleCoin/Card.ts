@@ -7,7 +7,7 @@ import createCardStat from "./createCardStat";
 const SingleCoinDialogCard = document.createElement("div");
 SingleCoinDialogCard.setAttribute(
   "class",
-  "dialog-card flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl"
+  "dialog-card flex h-full flex-col overflow-y-scroll bg-base-100 py-6 shadow-xl"
 );
 
 const createSingleCoinChart = (data: number[]): void => {
