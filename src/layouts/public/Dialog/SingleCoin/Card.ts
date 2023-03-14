@@ -99,7 +99,7 @@ const getDialogContent = (url: string): void => {
             <div class="card-body">
               
               <div class="card-title grid grid-flow-col grid-cols-layout_2" aria-label="slide-over-title">
-                <img src=${image?.thumb} alt=${name} loading="lazy" />
+                <img src=${image?.small} alt=${name} loading="lazy" />
                 <h1 class="text-5xl">${name}</h1>
                 <a href=${links.homepage[0]} class="btn btn-ghost btn-link" target="_blank">
                   <span class="text-xl">
