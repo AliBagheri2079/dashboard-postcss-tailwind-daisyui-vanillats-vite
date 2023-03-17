@@ -6,6 +6,7 @@ import SingleCoin from "@/pages/coin";
 import Weather from "@/pages/weather";
 import Waiting from "@/pages/waiting";
 import NotFound from "@/pages/notfound";
+import setDocumentTitle from "@/utils/documentTitle";
 
 const App = document.getElementById("app") as HTMLDivElement;
 App.setAttribute(
@@ -20,17 +21,18 @@ const manageRoutes = (): void => {
   switch (locationPath) {
     case "/register": {
       console.log("register page");
-      // Pages.append(Dashboard);
-      // App.append(Nav, Header, Pages);
+      setDocumentTitle("Register Page");
       break;
     }
     case "/": {
       Pages.append(Dashboard);
       App.append(Nav, Header, Pages, SingleCoin);
+      setDocumentTitle("Dashboard Page");
       break;
     }
     default: {
       App.append(NotFound);
+      setDocumentTitle("Not Found");
       break;
     }
   }
@@ -42,6 +44,7 @@ const manageHashes = (): void => {
   switch (hash) {
     case "#weather": {
       Pages.replaceChildren(Dashboard, Weather);
+      setDocumentTitle("Weather Page");
       break;
     }
     default: {
@@ -49,6 +52,7 @@ const manageHashes = (): void => {
       if (existHashes) break;
 
       Pages.replaceChildren(Dashboard, Waiting);
+      setDocumentTitle("Comming Soon");
       break;
     }
   }
