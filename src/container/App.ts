@@ -4,6 +4,8 @@ import Pages from "@/pages";
 import Dashboard from "@/pages/dashboard";
 import SingleCoin from "@/pages/coin";
 import Weather from "@/pages/weather";
+import Waiting from "@/pages/waiting";
+import NotFound from "@/pages/notfound";
 
 const App = document.getElementById("app") as HTMLDivElement;
 App.setAttribute(
@@ -16,19 +18,19 @@ const manageRoutes = (): void => {
   const locationPath = location.pathname;
 
   switch (locationPath) {
-    case "/": {
-      Pages.append(Dashboard);
-      App.append(Nav, Header, Pages, SingleCoin);
-      break;
-    }
     case "/register": {
       console.log("register page");
       // Pages.append(Dashboard);
       // App.append(Nav, Header, Pages);
       break;
     }
+    case "/": {
+      Pages.append(Dashboard);
+      App.append(Nav, Header, Pages, SingleCoin);
+      break;
+    }
     default: {
-      console.log("404 page");
+      App.append(NotFound);
       break;
     }
   }
@@ -43,6 +45,10 @@ const manageHashes = (): void => {
       break;
     }
     default: {
+      const existHashes: boolean = hash.includes("#coin-id") || hash === "";
+      if (existHashes) break;
+
+      Pages.replaceChildren(Dashboard, Waiting);
       break;
     }
   }
