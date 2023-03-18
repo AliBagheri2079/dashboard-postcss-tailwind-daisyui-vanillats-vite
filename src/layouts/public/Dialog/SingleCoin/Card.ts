@@ -132,11 +132,9 @@ const getDialogContent = (url: string): void => {
 
 const handleDialogContent = (event: HashChangeEvent): void => {
   const isCoinDialogURL = event.newURL.includes("#coin-id");
-  const url: string = event.newURL.replace(
-    "http://localhost:5173/#coin-id=",
-    ""
-  );
+  const url: string = location.hash.replace("#coin-id=", "");
 
+  // console.log(url);
   if (isCoinDialogURL) getDialogContent(url);
 };
 
