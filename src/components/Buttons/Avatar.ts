@@ -23,7 +23,10 @@ Avatar.innerHTML = `
     </li>
 
     <li>
-      <button class="btn-ghost btn justify-between capitalize">
+      <button 
+        id="avatar-action" 
+        class="btn-ghost btn justify-between capitalize"
+      >
         Logout
       </button>
     </li>

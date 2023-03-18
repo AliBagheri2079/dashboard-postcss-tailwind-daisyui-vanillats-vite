@@ -1,11 +1,14 @@
 import Nav from "@/layouts/private/Nav";
 import Header from "@/layouts/private/Header";
+
 import Pages from "@/pages";
 import Dashboard from "@/pages/dashboard";
 import SingleCoin from "@/pages/coin";
 import Weather from "@/pages/weather";
 import Waiting from "@/pages/waiting";
 import NotFound from "@/pages/notfound";
+import "@/pages/register";
+
 import setDocumentTitle from "@/utils/documentTitle";
 
 const App = document.getElementById("app") as HTMLDivElement;
@@ -19,15 +22,15 @@ const manageRoutes = (): void => {
   const locationPath = location.pathname;
 
   switch (locationPath) {
-    case "/register": {
-      console.log("register page");
-      setDocumentTitle("Register Page");
-      break;
-    }
-    case "/": {
+    case "/dashboard": {
       Pages.append(Dashboard);
       App.append(Nav, Header, Pages, SingleCoin);
       setDocumentTitle("Dashboard Page");
+      break;
+    }
+    case "/": {
+      //* handle on register page file
+      setDocumentTitle("Register Page");
       break;
     }
     default: {
