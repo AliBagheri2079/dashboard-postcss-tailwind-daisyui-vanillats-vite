@@ -2,7 +2,7 @@
 import { type RateLimitingFCType } from "@/global/types/RateLimitingFC";
 
 const debounce: RateLimitingFCType = (fn, delay) => {
-  let timeout: number;
+  let timeout: any;
 
   return (...args) => {
     if (typeof timeout !== "number") clearTimeout(timeout);
