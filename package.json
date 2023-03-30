@@ -13,6 +13,9 @@
     "format:scripts": "prettier . --write",
     "format:styles": "stylelint ./src/**/*.css --fix",
     "format": "npm run format:scripts && npm run format:styles",
+    "test": "jest --verbose",
+    "test:watch": "npm run test -- --watchAll",
+    "test:coverage": "npm run test -- --coverage",
     "prepare": "husky install"
   },
   "devDependencies": {
