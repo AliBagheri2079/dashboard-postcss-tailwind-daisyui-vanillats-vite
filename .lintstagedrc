@@ -1,4 +1,4 @@
 {
-  "./src/**/*.{ts,js}": ["prettier --write", "eslint --fix"],
+  "./src/**/*.{ts,js}": ["rome format --write", "rome check --apply"],
   "./src/**/*.css": "stylelint --fix"
 }

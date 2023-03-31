@@ -4,28 +4,28 @@ const ThemeButton = document.createElement("div");
 ThemeButton.setAttribute("class", "dropdown dropdown-end");
 
 const LightBtn = Button({
-  classes: "btn-dark btn-outline",
-  theme: "light",
+	classes: "btn-dark btn-outline",
+	theme: "light",
 });
 const DarkBtn = Button({
-  classes: "text-white",
-  theme: "dark",
+	classes: "text-white",
+	theme: "dark",
 });
 const LightYellowBtn = Button({
-  classes: "btn-warning btn-outline",
-  theme: "bumblebee",
+	classes: "btn-warning btn-outline",
+	theme: "bumblebee",
 });
 const DarkYellowBtn = Button({
-  classes: "btn-warning",
-  theme: "halloween",
+	classes: "btn-warning",
+	theme: "halloween",
 });
 const LightGreenBtn = Button({
-  classes: "btn-success btn-outline",
-  theme: "emerald",
+	classes: "btn-success btn-outline",
+	theme: "emerald",
 });
 const DarkGreenBtn = Button({
-  classes: "btn-success",
-  theme: "forest",
+	classes: "btn-success",
+	theme: "forest",
 });
 
 ThemeButton.innerHTML = `

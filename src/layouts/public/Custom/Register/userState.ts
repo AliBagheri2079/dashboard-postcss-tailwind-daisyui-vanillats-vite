@@ -1,7 +1,7 @@
 export const isRegisteredUser = (): void => {
-  location.replace("/dashboard");
+	location.replace("/dashboard");
 };
 
 export const isLoggedOutUser = (): void => {
-  location.replace("/");
+	location.replace("/");
 };

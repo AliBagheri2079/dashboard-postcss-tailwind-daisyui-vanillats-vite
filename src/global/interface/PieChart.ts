@@ -1,5 +1,5 @@
 export interface PieChartType {
-  id: string;
-  label: string;
-  data: number[];
+	id: string;
+	label: string;
+	data: number[];
 }

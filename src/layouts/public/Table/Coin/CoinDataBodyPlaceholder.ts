@@ -1,7 +1,7 @@
 let CoinDataBodyPlaceholder: string = "";
 
 for (let index = 0; index < 10; index++) {
-  CoinDataBodyPlaceholder += `
+	CoinDataBodyPlaceholder += `
    <tr class="hover">
      <th></th>
      <td>

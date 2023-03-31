@@ -16,13 +16,13 @@ WeatherData.innerHTML = `
 `;
 
 export const handleWeatherPageData = debounce((q: string[]) => {
-  // console.log("debounce", q[0]);
+	// console.log("debounce", q[0]);
 
-  getWeatherDataByCityName({ q: q[0], units: WeatherUnitsEnum.METRIC })
-    .then(({ data, status }) => {
-      if (status === 200) {
-        const weatherIcon = getCorrectWeatherIcon(data.weather[0].main);
-        WeatherData.innerHTML = `
+	getWeatherDataByCityName({ q: q[0], units: WeatherUnitsEnum.METRIC })
+		.then(({ data, status }) => {
+			if (status === 200) {
+				const weatherIcon = getCorrectWeatherIcon(data.weather[0].main);
+				WeatherData.innerHTML = `
           <div class="camera"></div>
           <div class="display">
             <div class="phone-1 artboard artboard-demo bg-gradient-to-r from-green-400 to-blue-500 transition-colors">
@@ -75,11 +75,11 @@ export const handleWeatherPageData = debounce((q: string[]) => {
             </div>
           </div>
           `;
-      }
-    })
-    .catch(error => {
-      console.error(error.message);
-      WeatherData.innerHTML = `
+			}
+		})
+		.catch((error) => {
+			console.error(error.message);
+			WeatherData.innerHTML = `
             <div class="camera"></div>
             <div class="display">
               <div class="phone-1 artboard artboard-demo bg-red-200">
@@ -94,7 +94,7 @@ export const handleWeatherPageData = debounce((q: string[]) => {
               </div>
             </div>
           `;
-    });
+		});
 }, 1000);
 
 export default WeatherData;

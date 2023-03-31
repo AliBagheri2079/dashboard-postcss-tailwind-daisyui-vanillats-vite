@@ -11,9 +11,9 @@ const cssFileOutput = "assets/css/[name].[contenthash].css"; // CSS file name on
  * Set and export configuration.
  */
 export const config = {
-  HOST: hostName,
-  PORT: portNumber,
-  JS_FILE_OUTPUT: jsFileOutput,
-  CSS_FILE_OUTPUT: cssFileOutput,
-  IS_DEV: process.env.NODE_ENV === "development",
+	HOST: hostName,
+	PORT: portNumber,
+	JS_FILE_OUTPUT: jsFileOutput,
+	CSS_FILE_OUTPUT: cssFileOutput,
+	IS_DEV: process.env.NODE_ENV === "development",
 };

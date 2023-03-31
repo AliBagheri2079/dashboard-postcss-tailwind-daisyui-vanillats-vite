@@ -3,19 +3,19 @@ import { type CoinsMarketType } from "@/global/interface/CoinsMarket";
 import { APICryptoInstance } from "./instance";
 
 type CoinsMarketFCType = (
-  params: CoinsMarketParamsType
+	params: CoinsMarketParamsType,
 ) => Promise<{ data: CoinsMarketType[]; status: number }> | never;
 
-const getCoinsMarket: CoinsMarketFCType = async params => {
-  try {
-    const { data, status } = await APICryptoInstance({
-      url: "/v3/coins/markets",
-      params,
-    });
-    return { data, status };
-  } catch {
-    throw new Error(`Error Message from 'getCoinsMarket' API`);
-  }
+const getCoinsMarket: CoinsMarketFCType = async (params) => {
+	try {
+		const { data, status } = await APICryptoInstance({
+			url: "/v3/coins/markets",
+			params,
+		});
+		return { data, status };
+	} catch {
+		throw new Error(`Error Message from 'getCoinsMarket' API`);
+	}
 };
 
 export default getCoinsMarket;

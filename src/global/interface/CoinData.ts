@@ -1,128 +1,128 @@
 export interface CoinDataType {
-  id: string;
-  symbol: string;
-  name: string;
-  hashing_algorithm: string;
-  categories: string[];
-  description: {
-    en: string;
-  };
-  links: {
-    homepage: string[];
-    blockchain_site: string[];
-    subreddit_url: string;
-    repos_url: {
-      github: string[];
-      bitbucket: string[] | [];
-    };
-  };
-  image: {
-    thumb: string;
-    small: string;
-    large: string;
-  };
-  genesis_date: Date;
-  coingecko_rank: number;
-  coingecko_score: number;
-  developer_score: number;
-  community_score: number;
-  liquidity_score: number;
-  public_interest_score: number;
-  market_data: {
-    current_price: {
-      usd: number;
-    };
-    ath: {
-      usd: number;
-    };
-    ath_change_percentage: {
-      usd: number;
-    };
-    ath_date: {
-      usd: Date;
-    };
-    atl: {
-      usd: number;
-    };
-    atl_change_percentage: {
-      usd: number;
-    };
-    atl_date: {
-      usd: Date;
-    };
-    market_cap: {
-      usd: number;
-    };
-    market_cap_rank: number;
-    fully_diluted_valuation: {
-      usd: number;
-    };
-    total_volume: {
-      usd: number;
-    };
-    high_24h: {
-      usd: number;
-    };
-    low_24h: {
-      usd: number;
-    };
-    price_change_24h_in_currency: {
-      usd: number;
-    };
-    price_change_percentage_1h_in_currency: {
-      usd: number;
-    };
-    price_change_percentage_24h_in_currency: {
-      usd: number;
-    };
-    price_change_percentage_7d_in_currency: {
-      usd: number;
-    };
-    price_change_percentage_14d_in_currency: {
-      usd: number;
-    };
-    price_change_percentage_60d_in_currency: {
-      usd: number;
-    };
-    price_change_percentage_200d_in_currency: {
-      usd: number;
-    };
-    price_change_percentage_1y_in_currency: {
-      usd: number;
-    };
-    market_cap_change_24h_in_currency: {
-      usd: number;
-    };
-    market_cap_change_percentage_24h_in_currency: {
-      usd: number;
-    };
-    total_supply: number;
-    max_supply: number;
-    circulating_supply: number;
-    sparkline_7d: {
-      price: number[];
-    };
-    last_updated: Date;
-  };
-  developer_data: {
-    forks: number;
-    stars: number;
-    subscribers: number;
-    total_issues: number;
-    closed_issues: number;
-    pull_requests_merged: number;
-    pull_request_contributors: number;
-    code_additions_deletions_4_weeks: {
-      additions: number;
-      deletions: number;
-    };
-    commit_count_4_weeks: number;
-    last_4_weeks_commit_activity_series: number[];
-  };
-  public_interest_stats: {
-    alexa_rank: number;
-  };
-  last_updated: Date;
+	id: string;
+	symbol: string;
+	name: string;
+	hashing_algorithm: string;
+	categories: string[];
+	description: {
+		en: string;
+	};
+	links: {
+		homepage: string[];
+		blockchain_site: string[];
+		subreddit_url: string;
+		repos_url: {
+			github: string[];
+			bitbucket: string[] | [];
+		};
+	};
+	image: {
+		thumb: string;
+		small: string;
+		large: string;
+	};
+	genesis_date: Date;
+	coingecko_rank: number;
+	coingecko_score: number;
+	developer_score: number;
+	community_score: number;
+	liquidity_score: number;
+	public_interest_score: number;
+	market_data: {
+		current_price: {
+			usd: number;
+		};
+		ath: {
+			usd: number;
+		};
+		ath_change_percentage: {
+			usd: number;
+		};
+		ath_date: {
+			usd: Date;
+		};
+		atl: {
+			usd: number;
+		};
+		atl_change_percentage: {
+			usd: number;
+		};
+		atl_date: {
+			usd: Date;
+		};
+		market_cap: {
+			usd: number;
+		};
+		market_cap_rank: number;
+		fully_diluted_valuation: {
+			usd: number;
+		};
+		total_volume: {
+			usd: number;
+		};
+		high_24h: {
+			usd: number;
+		};
+		low_24h: {
+			usd: number;
+		};
+		price_change_24h_in_currency: {
+			usd: number;
+		};
+		price_change_percentage_1h_in_currency: {
+			usd: number;
+		};
+		price_change_percentage_24h_in_currency: {
+			usd: number;
+		};
+		price_change_percentage_7d_in_currency: {
+			usd: number;
+		};
+		price_change_percentage_14d_in_currency: {
+			usd: number;
+		};
+		price_change_percentage_60d_in_currency: {
+			usd: number;
+		};
+		price_change_percentage_200d_in_currency: {
+			usd: number;
+		};
+		price_change_percentage_1y_in_currency: {
+			usd: number;
+		};
+		market_cap_change_24h_in_currency: {
+			usd: number;
+		};
+		market_cap_change_percentage_24h_in_currency: {
+			usd: number;
+		};
+		total_supply: number;
+		max_supply: number;
+		circulating_supply: number;
+		sparkline_7d: {
+			price: number[];
+		};
+		last_updated: Date;
+	};
+	developer_data: {
+		forks: number;
+		stars: number;
+		subscribers: number;
+		total_issues: number;
+		closed_issues: number;
+		pull_requests_merged: number;
+		pull_request_contributors: number;
+		code_additions_deletions_4_weeks: {
+			additions: number;
+			deletions: number;
+		};
+		commit_count_4_weeks: number;
+		last_4_weeks_commit_activity_series: number[];
+	};
+	public_interest_stats: {
+		alexa_rank: number;
+	};
+	last_updated: Date;
 }
 
 /*

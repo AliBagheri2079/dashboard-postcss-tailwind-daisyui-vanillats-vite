@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/rome/configuration_schema.json",
+  "organizeImports": {
+    "enabled": false
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    },
+    "ignore": ["*.config.cjs", "node_modules", "dist"]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "tab",
+    "indentSize": 2,
+    "lineWidth": 80,
+    "ignore": ["*.config.cjs", "node_modules", "dist"]
+  }
+}

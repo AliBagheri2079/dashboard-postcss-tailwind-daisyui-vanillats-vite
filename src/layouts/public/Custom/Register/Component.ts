@@ -6,25 +6,25 @@ import "./logout";
 import "./userState";
 
 class RegisterComponent extends HTMLDivElement {
-  constructor() {
-    //* Always call super first in constructor
-    super();
+	constructor() {
+		//* Always call super first in constructor
+		super();
 
-    // ? Element functionality written in here
-    //* Create a shadow root
-    const shadowRoot = this.attachShadow({ mode: "open" });
+		// ? Element functionality written in here
+		//* Create a shadow root
+		const shadowRoot = this.attachShadow({ mode: "open" });
 
-    //* attach the created elements to the shadow DOM
-    shadowRoot.appendChild(template.content.cloneNode(true));
-  }
+		//* attach the created elements to the shadow DOM
+		shadowRoot.appendChild(template.content.cloneNode(true));
+	}
 
-  connectedCallback(): void {
-    console.log("Custom square element added to page.");
-    handleLoginUser(this);
-    handleRegisterUser(this);
-  }
+	connectedCallback(): void {
+		console.log("Custom square element added to page.");
+		handleLoginUser(this);
+		handleRegisterUser(this);
+	}
 
-  /*
+	/*
   * Many Useful Methods
   disconnectedCallback(): void {
     console.log("Custom square element removed from page.");

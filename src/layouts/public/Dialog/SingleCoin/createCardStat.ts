@@ -1,13 +1,13 @@
 import { type CardStatType } from "@/global/interface/CardStat";
 
 const createCardStat = ({
-  icon,
-  title,
-  value,
-  desc,
-  status = "",
+	icon,
+	title,
+	value,
+	desc,
+	status = "",
 }: CardStatType): string => {
-  return `
+	return `
     <div class="stat">
       <div class="stat-figure ${status}">
         <span>${icon}</span>

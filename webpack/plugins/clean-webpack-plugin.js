@@ -9,5 +9,5 @@ import { paths } from "../configuration";
  * A webpack plugin to remove/clean your build folder(s) before building.
  */
 export const cleanWebpackPlugin = new CleanWebpackPlugin({
-  root: paths.dist,
+	root: paths.dist,
 });
