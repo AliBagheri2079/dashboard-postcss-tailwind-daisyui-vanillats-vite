@@ -7,14 +7,10 @@ export default Pages;
 
 /*
 <section>
-  <!--    
-    * commite and pre-production and release vs.1
-    * weather search with debounce & throttle - fetch & axios,
-    * list of todo with firebase,
-    * three.js
-    * login form (auth & regex) with web components and upload photo
-    * 2 language
+  <!--
+    *  room
+    * write document
+    * push githubpage
   -->
-  Content
 </section>
 */

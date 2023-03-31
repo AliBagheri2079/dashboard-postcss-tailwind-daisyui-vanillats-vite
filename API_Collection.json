@@ -1,264 +1,220 @@
 {
-	"info": {
-		"_postman_id": "5e8a2883-c6fe-42cc-b508-8b0709412c79",
-		"name": "Collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "17158902"
-	},
-	"item": [
-		{
-			"name": "Crypto API",
-			"item": [
-				{
-					"name": "getCoinsMarket",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&sparkline=true&price_change_percentage=24h",
-							"protocol": "https",
-							"host": [
-								"api",
-								"coingecko",
-								"com"
-							],
-							"path": [
-								"api",
-								"v3",
-								"coins",
-								"markets"
-							],
-							"query": [
-								{
-									"key": "vs_currency",
-									"value": "usd",
-									"description": "The target currency of market data (usd, eur, jpy, etc.)"
-								},
-								{
-									"key": "ids",
-									"value": null,
-									"description": "The ids of the coin, comma separated crytocurrency symbols (base). refers to /coins/list",
-									"disabled": true
-								},
-								{
-									"key": "category",
-									"value": null,
-									"description": "filter by coin category. Refer to /coin/categories/list",
-									"disabled": true
-								},
-								{
-									"key": "order",
-									"value": "market_cap_desc",
-									"description": "valid values: market_cap_desc, gecko_desc, gecko_asc, market_cap_asc, market_cap_desc, volume_asc, volume_desc, id_asc, id_desc\nsort results by field."
-								},
-								{
-									"key": "per_page",
-									"value": "250",
-									"description": "valid values: 1..250"
-								},
-								{
-									"key": "page",
-									"value": null,
-									"description": "Page through results",
-									"disabled": true
-								},
-								{
-									"key": "sparkline",
-									"value": "true",
-									"description": "Include sparkline 7 days data (eg. true, false)"
-								},
-								{
-									"key": "price_change_percentage",
-									"value": "24h",
-									"description": "Include price change percentage in 1h, 24h, 7d, 14d, 30d, 200d, 1y (eg. '1h,24h,7d' comma-separated, invalid values will be discarded)"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getCoinData",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=false&developer_data=true&sparkline=true",
-							"protocol": "https",
-							"host": [
-								"api",
-								"coingecko",
-								"com"
-							],
-							"path": [
-								"api",
-								"v3",
-								"coins",
-								"bitcoin"
-							],
-							"query": [
-								{
-									"key": "localization",
-									"value": "false",
-									"description": "Include all localized languages in response (true/false) [default: true]"
-								},
-								{
-									"key": "tickers",
-									"value": "false",
-									"description": "Include tickers data (true/false) [default: true]"
-								},
-								{
-									"key": "market_data",
-									"value": "true",
-									"description": "Include market_data (true/false) [default: true]"
-								},
-								{
-									"key": "community_data",
-									"value": "false",
-									"description": "Include community_data data (true/false) [default: true]"
-								},
-								{
-									"key": "developer_data",
-									"value": "true",
-									"description": "Include developer_data data (true/false) [default: true]"
-								},
-								{
-									"key": "sparkline",
-									"value": "true",
-									"description": "Include sparkline 7 days data (eg. true, false) [default: false]"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getCoinMarketChart",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1&interval=daily",
-							"protocol": "https",
-							"host": [
-								"api",
-								"coingecko",
-								"com"
-							],
-							"path": [
-								"api",
-								"v3",
-								"coins",
-								"bitcoin",
-								"market_chart"
-							],
-							"query": [
-								{
-									"key": "vs_currency",
-									"value": "usd",
-									"description": "The target currency of market data (usd, eur, jpy, etc.)"
-								},
-								{
-									"key": "days",
-									"value": "1",
-									"description": "Data up to number of days ago (eg. 1,14,30,max)"
-								},
-								{
-									"key": "interval",
-									"value": "daily",
-									"description": "Data interval. Possible value: daily"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "SearchOnCoinGecko",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.coingecko.com/api/v3/search?query=bitcoin",
-							"protocol": "https",
-							"host": [
-								"api",
-								"coingecko",
-								"com"
-							],
-							"path": [
-								"api",
-								"v3",
-								"search"
-							],
-							"query": [
-								{
-									"key": "query",
-									"value": "bitcoin",
-									"description": "Search for coins, categories and markets listed on CoinGecko ordered by largest Market Cap first"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Weather",
-			"item": [
-				{
-					"name": "getDataByCityName",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "https://api.openweathermap.org/data/2.5/weather?appid={API key}&q=berlin&units=metric",
-							"protocol": "https",
-							"host": [
-								"api",
-								"openweathermap",
-								"org"
-							],
-							"path": [
-								"data",
-								"2.5",
-								"weather"
-							],
-							"query": [
-								{
-									"key": "appid",
-									"value": "{API key}",
-									"description": "Your unique API key (you can always find it on your account page under the \"API key\" tab)"
-								},
-								{
-									"key": "q",
-									"value": "berlin",
-									"description": "City name, state code and country code divided by comma, Please, refer to ISO 3166 for the state codes or country codes.\n\nYou can specify the parameter not only in English. In this case, the API response should be returned in the same language as the language of requested location name if the location is in our predefined list of more than 200,000 locations."
-								},
-								{
-									"key": "units",
-									"value": "metric",
-									"description": "Units of measurement. standard, metric and imperial units are available. If you do not use the units parameter, standard units will be applied by default."
-								},
-								{
-									"key": "mode",
-									"value": "",
-									"description": "Response format. Possible values are xml and html. If you don't use the mode parameter format is JSON by default",
-									"disabled": true
-								},
-								{
-									"key": "lang",
-									"value": "",
-									"description": "You can use this parameter to get the output in your language",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		}
-	]
+  "info": {
+    "_postman_id": "5e8a2883-c6fe-42cc-b508-8b0709412c79",
+    "name": "Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "17158902"
+  },
+  "item": [
+    {
+      "name": "Crypto API",
+      "item": [
+        {
+          "name": "getCoinsMarket",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&sparkline=true&price_change_percentage=24h",
+              "protocol": "https",
+              "host": ["api", "coingecko", "com"],
+              "path": ["api", "v3", "coins", "markets"],
+              "query": [
+                {
+                  "key": "vs_currency",
+                  "value": "usd",
+                  "description": "The target currency of market data (usd, eur, jpy, etc.)"
+                },
+                {
+                  "key": "ids",
+                  "value": null,
+                  "description": "The ids of the coin, comma separated crytocurrency symbols (base). refers to /coins/list",
+                  "disabled": true
+                },
+                {
+                  "key": "category",
+                  "value": null,
+                  "description": "filter by coin category. Refer to /coin/categories/list",
+                  "disabled": true
+                },
+                {
+                  "key": "order",
+                  "value": "market_cap_desc",
+                  "description": "valid values: market_cap_desc, gecko_desc, gecko_asc, market_cap_asc, market_cap_desc, volume_asc, volume_desc, id_asc, id_desc\nsort results by field."
+                },
+                {
+                  "key": "per_page",
+                  "value": "250",
+                  "description": "valid values: 1..250"
+                },
+                {
+                  "key": "page",
+                  "value": null,
+                  "description": "Page through results",
+                  "disabled": true
+                },
+                {
+                  "key": "sparkline",
+                  "value": "true",
+                  "description": "Include sparkline 7 days data (eg. true, false)"
+                },
+                {
+                  "key": "price_change_percentage",
+                  "value": "24h",
+                  "description": "Include price change percentage in 1h, 24h, 7d, 14d, 30d, 200d, 1y (eg. '1h,24h,7d' comma-separated, invalid values will be discarded)"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getCoinData",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&market_data=true&community_data=false&developer_data=true&sparkline=true",
+              "protocol": "https",
+              "host": ["api", "coingecko", "com"],
+              "path": ["api", "v3", "coins", "bitcoin"],
+              "query": [
+                {
+                  "key": "localization",
+                  "value": "false",
+                  "description": "Include all localized languages in response (true/false) [default: true]"
+                },
+                {
+                  "key": "tickers",
+                  "value": "false",
+                  "description": "Include tickers data (true/false) [default: true]"
+                },
+                {
+                  "key": "market_data",
+                  "value": "true",
+                  "description": "Include market_data (true/false) [default: true]"
+                },
+                {
+                  "key": "community_data",
+                  "value": "false",
+                  "description": "Include community_data data (true/false) [default: true]"
+                },
+                {
+                  "key": "developer_data",
+                  "value": "true",
+                  "description": "Include developer_data data (true/false) [default: true]"
+                },
+                {
+                  "key": "sparkline",
+                  "value": "true",
+                  "description": "Include sparkline 7 days data (eg. true, false) [default: false]"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getCoinMarketChart",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=1&interval=daily",
+              "protocol": "https",
+              "host": ["api", "coingecko", "com"],
+              "path": ["api", "v3", "coins", "bitcoin", "market_chart"],
+              "query": [
+                {
+                  "key": "vs_currency",
+                  "value": "usd",
+                  "description": "The target currency of market data (usd, eur, jpy, etc.)"
+                },
+                {
+                  "key": "days",
+                  "value": "1",
+                  "description": "Data up to number of days ago (eg. 1,14,30,max)"
+                },
+                {
+                  "key": "interval",
+                  "value": "daily",
+                  "description": "Data interval. Possible value: daily"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "SearchOnCoinGecko",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.coingecko.com/api/v3/search?query=bitcoin",
+              "protocol": "https",
+              "host": ["api", "coingecko", "com"],
+              "path": ["api", "v3", "search"],
+              "query": [
+                {
+                  "key": "query",
+                  "value": "bitcoin",
+                  "description": "Search for coins, categories and markets listed on CoinGecko ordered by largest Market Cap first"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Weather",
+      "item": [
+        {
+          "name": "getDataByCityName",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://api.openweathermap.org/data/2.5/weather?appid={API key}&q=berlin&units=metric",
+              "protocol": "https",
+              "host": ["api", "openweathermap", "org"],
+              "path": ["data", "2.5", "weather"],
+              "query": [
+                {
+                  "key": "appid",
+                  "value": "{API key}",
+                  "description": "Your unique API key (you can always find it on your account page under the \"API key\" tab)"
+                },
+                {
+                  "key": "q",
+                  "value": "berlin",
+                  "description": "City name, state code and country code divided by comma, Please, refer to ISO 3166 for the state codes or country codes.\n\nYou can specify the parameter not only in English. In this case, the API response should be returned in the same language as the language of requested location name if the location is in our predefined list of more than 200,000 locations."
+                },
+                {
+                  "key": "units",
+                  "value": "metric",
+                  "description": "Units of measurement. standard, metric and imperial units are available. If you do not use the units parameter, standard units will be applied by default."
+                },
+                {
+                  "key": "mode",
+                  "value": "",
+                  "description": "Response format. Possible values are xml and html. If you don't use the mode parameter format is JSON by default",
+                  "disabled": true
+                },
+                {
+                  "key": "lang",
+                  "value": "",
+                  "description": "You can use this parameter to get the output in your language",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
 }
