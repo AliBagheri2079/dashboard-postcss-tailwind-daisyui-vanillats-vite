@@ -9,6 +9,6 @@ import { paths } from "../configuration";
  * A webpack plugin that simplifies creation of HTML files to serve your webpack bundles.
  */
 export const htmlWebpackPlugin = new HtmlWebpackPlugin({
-  inject: "body",
-  template: `${paths.public}/index.html`,
+	inject: "body",
+	template: `${paths.public}/index.html`,
 });

@@ -9,28 +9,28 @@ import { paths, config } from "./configuration";
  * Default dev server settings.
  */
 const devServer = {
-  open: true,
-  compress: false,
-  port: config.PORT,
-  host: config.HOST,
-  hot: true,
-  client: {
-    progress: true,
-  },
-  static: [
-    {
-      watch: true,
-      directory: paths.dist,
-    },
-  ],
+	open: true,
+	compress: false,
+	port: config.PORT,
+	host: config.HOST,
+	hot: true,
+	client: {
+		progress: true,
+	},
+	static: [
+		{
+			watch: true,
+			directory: paths.dist,
+		},
+	],
 };
 
 /**
  * Webpack development configuration.
  */
 const WebpackConfig = {
-  devServer,
-  devtool: "cheap-module-source-map",
+	devServer,
+	devtool: "cheap-module-source-map",
 };
 
 // Export configuration.

@@ -8,11 +8,11 @@ import { config } from "../configuration";
  * Default modules loader for CSS.
  */
 export const css = {
-  test: /\.css$/,
-  use: [
-    config.IS_DEV ? "style-loader" : MiniCssExtractPlugin.loader,
-    "css-loader",
-    "postcss-loader",
-  ],
-  exclude: /node_modules/,
+	test: /\.css$/,
+	use: [
+		config.IS_DEV ? "style-loader" : MiniCssExtractPlugin.loader,
+		"css-loader",
+		"postcss-loader",
+	],
+	exclude: /node_modules/,
 };

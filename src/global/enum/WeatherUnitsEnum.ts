@@ -1,5 +1,5 @@
 export enum WeatherUnitsEnum {
-  STANDARD = "standard",
-  METRIC = "metric",
-  IMPERIAL = "imperail",
+	STANDARD = "standard",
+	METRIC = "metric",
+	IMPERIAL = "imperail",
 }

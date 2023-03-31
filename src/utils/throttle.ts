@@ -2,18 +2,18 @@
 import { type RateLimitingFCType } from "@/global/types/RateLimitingFC";
 
 const throttle: RateLimitingFCType = (fn, delay) => {
-  let shouldWait: boolean = false;
+	let shouldWait: boolean = false;
 
-  return (...args) => {
-    if (shouldWait) return;
+	return (...args) => {
+		if (shouldWait) return;
 
-    fn(args);
-    shouldWait = true;
+		fn(args);
+		shouldWait = true;
 
-    setTimeout(() => {
-      shouldWait = false;
-    }, delay);
-  };
+		setTimeout(() => {
+			shouldWait = false;
+		}, delay);
+	};
 };
 
 export default throttle;

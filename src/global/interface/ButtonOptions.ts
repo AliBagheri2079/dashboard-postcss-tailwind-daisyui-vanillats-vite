@@ -1,4 +1,4 @@
 export interface ButtonOptions {
-  classes: string;
-  theme: string;
+	classes: string;
+	theme: string;
 }

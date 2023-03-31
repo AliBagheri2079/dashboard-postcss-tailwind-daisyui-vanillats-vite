@@ -4,15 +4,15 @@ import { navItems } from "@/components/Navbar/data";
 
 const Menu = document.createElement("ul");
 Menu.setAttribute(
-  "class",
-  "menu rounded-box menu-compact p-2 px-0 lg:menu-normal"
+	"class",
+	"menu rounded-box menu-compact p-2 px-0 lg:menu-normal",
 );
 
-navItems.forEach(item => {
-  if (typeof item.collapse === "object") {
-    const NavCollapseLink = createNavCollapseLink(item.collapse);
+navItems.forEach((item) => {
+	if (typeof item.collapse === "object") {
+		const NavCollapseLink = createNavCollapseLink(item.collapse);
 
-    Menu.innerHTML += `
+		Menu.innerHTML += `
       <div
         tabindex="0"
         class="collapse collapse-arrow rounded-box cursor-pointer"
@@ -32,13 +32,13 @@ navItems.forEach(item => {
         </ul>
       </div>
     `;
-  } else {
-    Menu.innerHTML += `
+	} else {
+		Menu.innerHTML += `
       <li class="nav-item gap-2">
         ${NavLink(item)}
       </li>
     `;
-  }
+	}
 });
 
 export default Menu;

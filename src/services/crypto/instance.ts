@@ -8,9 +8,9 @@ import axios, { type AxiosInstance } from "axios";
 // }
 
 export const APICryptoInstance: AxiosInstance = axios.create({
-  method: "get",
-  baseURL: "https://api.coingecko.com/api",
-  /*
+	method: "get",
+	baseURL: "https://api.coingecko.com/api",
+	/*
     * Aborts request after 5 seconds
     ! timeout: 2000,
     * And you can use helper function
@@ -18,21 +18,21 @@ export const APICryptoInstance: AxiosInstance = axios.create({
     ? signal: AbortSignal.timeout(5000),
   */
 
-  /*
+	/*
     * `url` is the server URL that will be used for the request
     ? url: "/user",
   */
-  /*
+	/*
     * `method` is the request method to be used when making the request
     ? method: "get", // default
   */
-  /*
+	/*
     * `baseURL` will be prepended to `url` unless `url` is absolute.
     * It can be convenient to set `baseURL` for an instance of axios to pass relative URLs
     * to methods of that instance.
     ? baseURL: "https://some-domain.com/api",
    */
-  /*
+	/*
     * `transformRequest` allows changes to the request data before it is sent to the server
     * This is only applicable for request methods 'PUT', 'POST', 'PATCH' and 'DELETE'
     * The last function in the array must return a string or an instance of Buffer, ArrayBuffer,
@@ -56,7 +56,7 @@ export const APICryptoInstance: AxiosInstance = axios.create({
     ?   },
     ? ],
   */
-  /*
+	/*
       * `headers` are custom headers to be sent
       ? headers: {
       ?   Accept: "application/json",
@@ -64,7 +64,7 @@ export const APICryptoInstance: AxiosInstance = axios.create({
       ?   "Content-Type": "application/x-www-form-urlencoded",
       ? },
     */
-  /*
+	/*
       * `params` are the URL parameters to be sent with the request
       * Must be a plain object or a URLSearchParams object
       * NOTE: params that are null or undefined are not rendered in the URL.
@@ -72,14 +72,14 @@ export const APICryptoInstance: AxiosInstance = axios.create({
       ?   ID: 12345,
       ? },
     */
-  /*
+	/*
     * `paramsSerializer` is an optional function in charge of serializing `params`
     * (e.g. https://www.npmjs.com/package/qs, http://api.jquery.com/jquery.param/)
     ? paramsSerializer: function (params) {
     ?   return Qs.stringify(params, { arrayFormat: "brackets" });
     ? },
   */
-  /*
+	/*
     * `data` is the data to be sent as the request body
     * Only applicable for request methods 'PUT', 'POST', 'DELETE', and 'PATCH'
     * When no `transformRequest` is set, must be of one of the following types:
@@ -95,24 +95,24 @@ export const APICryptoInstance: AxiosInstance = axios.create({
     ?  firstName: "Fred",
     ? },
     */
-  /*
+	/*
     * `timeout` specifies the number of milliseconds before the request times out.
     * If the request takes longer than `timeout`, the request will be aborted.
     ? timeout: 1000, // default is `0` (no timeout)
    */
-  /*
+	/*
     * `withCredentials` indicates whether or not cross-site Access-Control requests
     * should be made using credentials
     ? withCredentials: false, // default
   */
-  /*
+	/*
     * `adapter` allows custom handling of requests which makes testing easier.
     * Return a promise and supply a valid response (see lib/adapters/README.md).
     ? adapter: function (config) {
     ?   
     ? },
   */
-  /*
+	/*
     * `auth` indicates that HTTP Basic auth should be used, and supplies credentials.
     * This will set an `Authorization` header, overwriting any existing
     * `Authorization` custom headers you have set using `headers`.
@@ -123,48 +123,48 @@ export const APICryptoInstance: AxiosInstance = axios.create({
     ?   password: "s00pers3cret",
     ? },
   */
-  /*
+	/*
       * `responseType` indicates the type of data that the server will respond with
       * options are: 'arraybuffer', 'document', 'json', 'text', 'stream'
       *   browser only: 'blob'
       ? responseType: "json", // default
     */
-  /*
+	/*
     * `responseEncoding` indicates encoding to use for decoding responses (Node.js only)
     * Note: Ignored for `responseType` of 'stream' or client-side requests
     ? responseEncoding: "utf8", // default
   */
-  /*
+	/*
     * `xsrfCookieName` is the name of the cookie to use as a value for xsrf token
     ? xsrfCookieName: "XSRF-TOKEN", // default
   */
-  /*
+	/*
     * `xsrfHeaderName` is the name of the http header that carries the xsrf token value
     ? xsrfHeaderName: "X-XSRF-TOKEN", // default
   */
-  /*
+	/*
     * `onUploadProgress` allows handling of progress events for uploads
     * browser only
     ? onUploadProgress: function (progressEvent) {
     ?  // Do whatever you want with the native progress event
     ? },
   */
-  /*
+	/*
     * `onDownloadProgress` allows handling of progress events for downloads
     * browser only
     ? onDownloadProgress: function (progressEvent) {
     ?  // Do whatever you want with the native progress event
     ? },
   */
-  /*
+	/*
     * `maxContentLength` defines the max size of the http response content in bytes allowed in node.js
     ? maxContentLength: 2000,
   */
-  /*
+	/*
     * `maxBodyLength` (Node only option) defines the max size of the http request content in bytes allowed
     ? maxBodyLength: 2000,
   */
-  /*
+	/*
     * `validateStatus` defines whether to resolve or reject the promise for a given
     * HTTP response status code. If `validateStatus` returns `true` (or is set to `null`
     * or `undefined`), the promise will be resolved; otherwise, the promise will be
@@ -173,12 +173,12 @@ export const APICryptoInstance: AxiosInstance = axios.create({
     ?  return status >= 200 && status < 300; // default
     ? },
   */
-  /*
+	/*
     * `maxRedirects` defines the maximum number of redirects to follow in node.js.
     * If set to 0, no redirects will be followed.
     ? maxRedirects: 5, // default
   */
-  /*
+	/*
     * `socketPath` defines a UNIX Socket to be used in node.js.
     * e.g. '/var/run/docker.sock' to send requests to the docker daemon.
     * Only either `socketPath` or `proxy` can be specified.
@@ -191,7 +191,7 @@ export const APICryptoInstance: AxiosInstance = axios.create({
     ? httpAgent: new http.Agent({ keepAlive: true }),
     ? httpsAgent: new https.Agent({ keepAlive: true }),
   */
-  /*
+	/*
     * `proxy` defines the hostname, port, and protocol of the proxy server.
     * You can also define your proxy using the conventional `http_proxy` and
     * `https_proxy` environment variables. If you are using environment variables
@@ -213,12 +213,12 @@ export const APICryptoInstance: AxiosInstance = axios.create({
     ?   },
     ? },
   */
-  /*
+	/*
     * `cancelToken` specifies a cancel token that can be used to cancel the request
     * (see Cancellation section below for details)
     ? cancelToken: new CancelToken(function (cancel) {}),
   */
-  /*
+	/*
     * `decompress` indicates whether or not the response body should be decompressed
     * automatically. If set to `true` will also remove the 'content-encoding' header
     * from the responses objects of all decompressed responses
@@ -229,44 +229,44 @@ export const APICryptoInstance: AxiosInstance = axios.create({
 
 //* Example with Fetch()
 export async function getData(
-  url: RequestInfo | URL,
-  data?: object
-  // init: RequestInit | undefined
+	url: RequestInfo | URL,
+	data?: object,
+	// init: RequestInit | undefined
 ): Promise<Response> {
-  //* Default options are marked with *
-  const response = await fetch(url, {
-    //* GET, POST, PUT, DELETE, etc.
-    method: "GET",
+	//* Default options are marked with *
+	const response = await fetch(url, {
+		//* GET, POST, PUT, DELETE, etc.
+		method: "GET",
 
-    //* no-cors, *cors, same-origin
-    mode: "cors",
+		//* no-cors, *cors, same-origin
+		mode: "cors",
 
-    //* default, no-cache, reload, force-cache, only-if-cached
-    cache: "no-cache",
+		//* default, no-cache, reload, force-cache, only-if-cached
+		cache: "no-cache",
 
-    //* include, *same-origin, omit
-    credentials: "same-origin",
+		//* include, *same-origin, omit
+		credentials: "same-origin",
 
-    headers: {
-      "Content-Type": "application/json",
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
+		headers: {
+			"Content-Type": "application/json",
+			// 'Content-Type': 'application/x-www-form-urlencoded',
+		},
 
-    //* manual, *follow, error
-    redirect: "follow",
+		//* manual, *follow, error
+		redirect: "follow",
 
-    /*
-     * no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-     */
-    referrerPolicy: "no-referrer",
+		/*
+		 * no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+		 */
+		referrerPolicy: "no-referrer",
 
-    //* body data type must match "Content-Type" header
-    body: JSON.stringify(data),
-  });
-  //* parses JSON response into native JavaScript objects
-  const responseData = await response.json();
+		//* body data type must match "Content-Type" header
+		body: JSON.stringify(data),
+	});
+	//* parses JSON response into native JavaScript objects
+	const responseData = await response.json();
 
-  return responseData;
+	return responseData;
 }
 // getData(
 //   `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=2&sparkline=true&price_change_percentage=24h`

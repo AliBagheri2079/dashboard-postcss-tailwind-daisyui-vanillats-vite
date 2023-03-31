@@ -1,27 +1,27 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import { type CoinsMarketType } from "@/global/interface/CoinsMarket";
 import {
-  currencyFormat,
-  percentageFormat,
-  relativeTimeFormat,
+	currencyFormat,
+	percentageFormat,
+	relativeTimeFormat,
 } from "@/utils/format";
 
 const createCoinDataBodyContent = ({
-  current_price,
-  id,
-  image,
-  last_updated,
-  market_cap,
-  market_cap_rank,
-  name,
-  symbol,
-  price_change_percentage_24h,
+	current_price,
+	id,
+	image,
+	last_updated,
+	market_cap,
+	market_cap_rank,
+	name,
+	symbol,
+	price_change_percentage_24h,
 }: CoinsMarketType): string => {
-  const lastTime = new Date(last_updated).getSeconds();
-  const newTime = new Date(Date.now()).getSeconds();
-  // console.assert(newTime - lastTime, 'error');
+	const lastTime = new Date(last_updated).getSeconds();
+	const newTime = new Date(Date.now()).getSeconds();
+	// console.assert(newTime - lastTime, 'error');
 
-  return `
+	return `
   <tr id=${id} class="hover">
     <th>${market_cap_rank ?? ""}</th>
     <td>
@@ -45,12 +45,12 @@ const createCoinDataBodyContent = ({
     <td>${market_cap}</td>
     <td 
       class=${
-        (price_change_percentage_24h ?? 0) > 0
-          ? "text-success"
-          : (price_change_percentage_24h ?? 0) < 0
-          ? "text-error"
-          : ""
-      }
+				(price_change_percentage_24h ?? 0) > 0
+					? "text-success"
+					: (price_change_percentage_24h ?? 0) < 0
+					? "text-error"
+					: ""
+			}
     >
       ${percentageFormat.format(price_change_percentage_24h ?? 0)}
     </td>

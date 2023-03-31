@@ -5,9 +5,9 @@ import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 
 // Import Configuration.
 import {
-  cleanWebpackPlugin,
-  miniCssExtractPlugin,
-  imageMinimizerWebpackPlugin,
+	cleanWebpackPlugin,
+	miniCssExtractPlugin,
+	imageMinimizerWebpackPlugin,
 } from "./plugins";
 import { WebpackCommonConfig } from "./common";
 
@@ -20,15 +20,15 @@ const plugins = [cleanWebpackPlugin, miniCssExtractPlugin];
  * Webpack production configuration.
  */
 const WebpackConfig = {
-  plugins,
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new CssMinimizerPlugin(),
-      new TerserPlugin(),
-      imageMinimizerWebpackPlugin,
-    ],
-  },
+	plugins,
+	optimization: {
+		minimize: true,
+		minimizer: [
+			new CssMinimizerPlugin(),
+			new TerserPlugin(),
+			imageMinimizerWebpackPlugin,
+		],
+	},
 };
 
 // Export configuration.
