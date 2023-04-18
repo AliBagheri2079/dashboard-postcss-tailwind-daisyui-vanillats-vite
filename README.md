@@ -1,4 +1,6 @@
-# Dashboard TS
+# Demo Dashboard TS
+
+<img src="./Screenshot.png" alt="Dashboard Website Screenshot"/>
 
 ## Features
 
